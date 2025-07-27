@@ -11,7 +11,10 @@ const orderRoutes = require("./routes/orderRoutes");
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://mern-food-app-frontend.onrender.com", // your actual frontend domain
+  credentials: true,
+}));
 app.use(express.json());
 
 connectDB();

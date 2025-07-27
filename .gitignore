@@ -10,5 +10,4 @@ server/.env
 *.log
 
 # Build
-client/build/
 dist/
