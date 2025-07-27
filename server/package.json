@@ -18,8 +18,5 @@
     "mongodb": "4.0",
     "mongoose": "^8.16.4",
     "twilio": "^5.8.0"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.10"
   }
 }
