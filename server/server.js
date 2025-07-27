@@ -12,7 +12,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin: "https://mern-food-app-frontend.onrender.com", // your actual frontend domain
+  origin: "https://mern-food-app-frontend-0meh.onrender.com", // your actual frontend domain
   credentials: true,
 }));
 app.use(express.json());
