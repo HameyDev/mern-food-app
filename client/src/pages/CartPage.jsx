@@ -11,6 +11,10 @@ const CartPage = () => {
   const navigate = useNavigate();
   const [isClosing, setIsClosing] = useState(false);
 
+  useEffect(() => {
+    document.title = "Cart | FlavorVerse";
+  }, []);
+
   const closePopup = () => {
     setIsClosing(true); // Trigger animation
     setTimeout(() => {

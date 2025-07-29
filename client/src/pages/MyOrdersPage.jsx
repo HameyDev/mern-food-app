@@ -6,6 +6,10 @@ const MyOrdersPage = () => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    document.title = "My Order | FlavorVerse";
+  }, []);
+
   const fetchOrders = async () => {
     try {
       const token = localStorage.getItem("token");

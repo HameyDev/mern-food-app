@@ -5,6 +5,10 @@ import ProductCard from "../components/ProductCard";
 const FavoritesPage = () => {
   const [favorites, setFavorites] = useState([]);
 
+  useEffect(() => {
+    document.title = "Favorites | FlavorVerse";
+  }, []);
+
   const fetchFavorites = async () => {
     try {
       const token = localStorage.getItem("token");

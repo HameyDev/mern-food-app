@@ -7,6 +7,10 @@ const ThankYouPage = () => {
   const { search } = useLocation();
   const orderId = new URLSearchParams(search).get("orderId");
   const [order, setOrder] = useState(null);
+
+  useEffect(() => {
+    document.title = "Thanks | FlavorVerse";
+  }, []);
   
 
   useEffect(() => {

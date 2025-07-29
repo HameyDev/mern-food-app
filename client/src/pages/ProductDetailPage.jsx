@@ -24,6 +24,10 @@ const ProductDetail = () => {
   const [selectedDrink, setSelectedDrink] = useState("");
 
   useEffect(() => {
+    document.title = "Product Detail | FlavorVerse";
+  }, []);
+
+  useEffect(() => {
     axios
       .get(`https://mern-food-app-030p.onrender.com/api/products/${id}`)
       .then((res) => {

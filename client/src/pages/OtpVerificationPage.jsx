@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
@@ -6,6 +6,10 @@ import { useNavigate } from "react-router-dom";
 const OtpVerificationPage = () => {
   const [otp, setOtp] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+      document.title = "Verify Phone | FlavorVerse";
+    }, []);
 
   const handleVerify = async () => {
     const pendingSignup = JSON.parse(localStorage.getItem("pendingSignup"));

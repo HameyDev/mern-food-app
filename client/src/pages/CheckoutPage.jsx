@@ -12,6 +12,10 @@ const CheckoutPage = () => {
   const [address, setAddress] = useState({ street: "", city: "", phone: "" });
   const token  = localStorage.getItem("token");
 
+  useEffect(() => {
+    document.title = "Checkout | FlavorVerse";
+  }, []);
+
    useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) {

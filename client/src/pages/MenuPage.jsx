@@ -8,6 +8,10 @@ const MenuPage = () => {
   const [products, setProducts] = useState([]);
   const [filter, setFilter] = useState("All");
 
+  useEffect(() => {
+    document.title = "Menu | FlavorVerse";
+  }, []);
+
   const location = useLocation();
 
   useEffect(() => {
