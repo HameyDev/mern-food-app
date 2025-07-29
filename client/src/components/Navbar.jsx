@@ -35,7 +35,15 @@ const Navbar = () => {
         </Link>
 
         {/* Mobile menu icon */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-3">
+          <Link to="/cart" className="relative">
+            <ShoppingCart className="text-white w-6 h-6 hover:text-red-500 transition mx-auto" />
+              {totalItems > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                {totalItems}
+              </span>
+            )}
+          </Link>
           <button onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X size={26} className="text-white" /> : <Menu size={26} className="text-white" />}
           </button>
@@ -100,7 +108,7 @@ const Navbar = () => {
               <span className="text-gray-400">👤 Hi, {userName}</span>
               <button
                 onClick={() => { setMenuOpen(false); handleLogout(); }}
-                className="px-3 py-1 border border-white rounded hover:bg-red-500 transition text-white"
+                className="px-3 py-1 border border-white text-white rounded hover:bg-red-500 transition text-white"
               >
                 Logout
               </button>
@@ -121,15 +129,6 @@ const Navbar = () => {
               </button>
             </>
           )}
-
-          <Link to="/cart" className="relative">
-            <ShoppingCart className="text-white w-6 h-6 hover:text-red-500 transition mx-auto" />
-              {totalItems > 0 && (
-              <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
-                {totalItems}
-              </span>
-            )}
-          </Link>
         </div>
       )}
     </nav>
