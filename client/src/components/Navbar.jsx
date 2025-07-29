@@ -61,7 +61,7 @@ const Navbar = () => {
               <span className="text-gray-400 font-medium">👤 Hi, {userName}</span>
               <button
                 onClick={handleLogout}
-                className="px-3 py-1 border border-white rounded hover:bg-red-500 transition"
+                className="px-3 py-1 border text-white border-white rounded hover:bg-red-500 transition"
               >
                 Logout
               </button>
